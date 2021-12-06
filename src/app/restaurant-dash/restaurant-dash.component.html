@@ -1,0 +1,151 @@
+<nav class="navbar navbar-light bg-primary">
+  <div class="container-fluid">
+    <h2>Restaurant Records App</h2>
+    <div class="d-flex">
+      <button
+        type="button"
+        class="btn btn-success"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Add Restaurant
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="p-5 mb-4 bg-light rounded-3">
+  <div class="container-fluid py-5">
+    <h1 class="display-5 fw-bold">Restaurant Records Management</h1>
+    <p class="col-md-8 fs-4">
+      Yoy can save records of restaurant using Angular
+    </p>
+    <a
+      class="btn btn-primary btn-lg"
+      type="button"
+      href="https://www.google.com/search?q=Tastycodeiz&oq=Tastycodeiz&aqs=chrome..69i57j0i13j0i10i13.733j0j7&sourceid=chrome&ie=UTF-8"
+      target="_blank"
+      >Tastycodeiz</a
+    >
+  </div>
+</div>
+
+<table class="table mt-4">
+  <thead>
+    <tr>
+      <th scope="col">Restaurant Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Mobile</th>
+      <th scope="col">Address</th>
+      <th scope="col">Services</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Partha Debnath</td>
+      <td>partha.aastha@gmail.com</td>
+      <td>98323256644</td>
+      <td>
+        10/1, Dr. B. C. Roy Sarani, East Vivekananda Pally, Siligruri - 734006.
+      </td>
+      <td>Tea & Coffee</td>
+      <td>
+        <button class="btn btn-info">Edit</button>&nbsp;
+        <button class="btn btn-danger">Delete</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Add Restaurant Data</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formValue">
+          <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Restaurant Name"
+              id="name"
+              formControlName="name"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="emailId" class="form-label">Email Id</label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Email"
+              id="emailId"
+              formControlName="emailId"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="mobile" class="form-label">Mobile</label>
+            <input
+              type="text"
+              class="form-control"
+              id="mobile"
+              placeholder="Mobile No"
+              formControlName="mobile"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="Address"
+              formControlName="address"
+            />
+          </div>
+
+          <div class="mb-3">
+            <label for="services" class="form-label">Service</label>
+            <input
+              type="text"
+              class="form-control"
+              id="services"
+              placeholder="Service"
+              formControlName="services"
+            />
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary" (click)="addResto()">
+          Add Details
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+{
+  "restaurant": [
+    {
+      "id": 1,
+      "name": "Partha Debnath",
+      "email": "partha.aastha@gmail.com",
+      "mobile": "98323256644",
+      "address": "10/1, Dr. B. C. Roy Sarani, East Vivekananda Pally, Siligruri - 734006.",
+      "services": "Tea &amp; Coffee"
+    },
+    {
+      "id": 2,
+      "name": "aaa",
+      "mobile": "121212121212",
+      "address": "wffdfsdf",
+      "services": "qweqweqwe"
+    }
+  ]
+}
