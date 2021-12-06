@@ -7,6 +7,7 @@
         class="btn btn-success"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
+        (click)="clickAddResto()"
       >
         Add Restaurant
       </button>
@@ -54,8 +55,17 @@
       </td>
       <td>{{ data.services }}</td>
       <td>
-        <button class="btn btn-info">Edit</button>&nbsp;
-        <button class="btn btn-danger">Delete</button>
+        <button
+          class="btn btn-info"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+          (click)="onEditResto(data)"
+        >
+          Edit</button
+        >&nbsp;
+        <button class="btn btn-danger" (click)="deleteResto(data)">
+          Delete
+        </button>
       </td>
     </tr>
   </tbody>
@@ -72,7 +82,12 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Add Restaurant Data</h5>
+        <h5 class="modal-title" id="exampleModalLabel" *ngIf="showAddBtn">
+          Add New Restaurant
+        </h5>
+        <h5 class="modal-title" id="exampleModalLabel" *ngIf="showEditBtn">
+          Edit Restaurant
+        </h5>
         <button
           type="button"
           class="btn-close"
@@ -94,13 +109,13 @@
           </div>
 
           <div class="mb-3">
-            <label for="emailId" class="form-label">Email Id</label>
+            <label for="email" class="form-label">Email Id</label>
             <input
               type="text"
               class="form-control"
               placeholder="Email"
-              id="emailId"
-              formControlName="emailId"
+              id="email"
+              formControlName="email"
             />
           </div>
 
@@ -142,8 +157,21 @@
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
           Close
         </button>
-        <button type="button" class="btn btn-primary" (click)="addResto()">
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="addResto()"
+          *ngIf="showAddBtn"
+        >
           Add Details
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          (click)="updateResto()"
+          *ngIf="showEditBtn"
+        >
+          Update Details
         </button>
       </div>
     </div>

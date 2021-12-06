@@ -10,11 +10,11 @@
     },
     {
       "id": 2,
-      "name": "Dumm1",
-      "email": "Dumm1@gmail.com",
-      "mobile": "9999999999",
-      "address": "Dumm1 Address",
-      "services": "Dumm1 Services"
+      "name": "Dummy Name 2",
+      "email": "who@gmail.com",
+      "mobile": "9932099320",
+      "address": "Dummy 2 Address",
+      "services": "Serving"
     },
     {
       "id": 3,
@@ -57,18 +57,19 @@
       "services": "Dumm5 Services"
     },
     {
-      "id": 8,
-      "name": "aaa",
-      "email": "fgfg@nmbmbm.ccc",
-      "mobile": "121212121212",
-      "address": "wffdfsdf",
-      "services": "qweqweqwe"
-    },
-    {
       "id": 9,
       "name": "Dummy Name",
+      "email": "dummy@in.com",
       "mobile": "9832098320",
       "address": "Dummy Address",
+      "services": "House Keeping"
+    },
+    {
+      "id": 10,
+      "name": "Pravat Sarkar",
+      "email": "pravat.aastha@gmail.com",
+      "mobile": "9832011228",
+      "address": "Siliguri",
       "services": "House Keeping"
     }
   ]

@@ -6,9 +6,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RestaurantDashComponent } from './restaurant-dash/restaurant-dash.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
-  declarations: [AppComponent, RestaurantDashComponent],
+  declarations: [AppComponent, RestaurantDashComponent, LoginComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
