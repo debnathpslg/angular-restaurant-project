@@ -72,5 +72,13 @@
       "address": "Siliguri",
       "services": "House Keeping"
     }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "userName": "partha",
+      "email": "partha.aastha@gmail.com",
+      "password": "1234"
+    }
   ]
 }
