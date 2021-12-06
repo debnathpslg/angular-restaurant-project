@@ -12,6 +12,7 @@ export class RestaurantDashComponent implements OnInit {
   formValue!: FormGroup;
 
   restaurantModelObj: RestaurantData = new RestaurantData();
+  allRestaurantData: any;
 
   constructor(private formBuilder: FormBuilder, private api: ApiService) {}
 
@@ -23,6 +24,8 @@ export class RestaurantDashComponent implements OnInit {
       address: [''],
       services: [''],
     });
+
+    this.getAllData();
   }
 
   addResto() {
@@ -38,5 +41,11 @@ export class RestaurantDashComponent implements OnInit {
       (err: any) => {
         alert('Something went wrong !!!');
       };
+  }
+
+  getAllData() {
+    this.api.getRestaurant().subscribe((res) => {
+      this.allRestaurantData = res;
+    });
   }
 }

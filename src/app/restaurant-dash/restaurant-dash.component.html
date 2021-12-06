@@ -44,15 +44,15 @@
   </thead>
 
   <tbody>
-    <tr>
-      <td>1</td>
-      <td>Partha Debnath</td>
-      <td>partha.aastha@gmail.com</td>
-      <td>98323256644</td>
+    <tr *ngFor="let data of allRestaurantData">
+      <td>{{ data.id }}</td>
+      <td>{{ data.name }}</td>
+      <td>{{ data.email }}</td>
+      <td>{{ data.mobile }}</td>
       <td>
-        10/1, Dr. B. C. Roy Sarani, East Vivekananda Pally, Siligruri - 734006.
+        {{ data.address }}
       </td>
-      <td>Tea & Coffee</td>
+      <td>{{ data.services }}</td>
       <td>
         <button class="btn btn-info">Edit</button>&nbsp;
         <button class="btn btn-danger">Delete</button>
