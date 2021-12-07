@@ -6,9 +6,9 @@
           <h1>Restaurant Login</h1>
           <hr />
         </div>
-        <form>
+        <form [formGroup]="loginForm" (ngSubmit)="submitLogin()">
           <div class="form-group">
-            <label for="email">Email address</label>
+            <label for="email">Email Address</label>
             <input
               type="email"
               class="form-control"
@@ -16,6 +16,7 @@
               aria-describedby="emailHelp"
               formControlName="email"
               placeholder="Enter registered email id"
+              formGroupName="email"
               required
             />
             <small id="emailHelp" class="form-text text-muted"
@@ -29,12 +30,14 @@
               class="form-control"
               id="password"
               formControlName="password"
+              formGroupName="password"
               required
             />
           </div>
           <br />
           <button type="submit" class="btn btn-primary">Login</button>
         </form>
+        <a routerLink="/signup">New User? Click hereto signup.</a>
       </div>
     </div>
   </div>

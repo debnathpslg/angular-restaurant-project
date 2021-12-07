@@ -79,6 +79,12 @@
       "userName": "partha",
       "email": "partha.aastha@gmail.com",
       "password": "1234"
+    },
+    {
+      "userName": "Temp User",
+      "email": "temp@in.com",
+      "password": "pass1234",
+      "id": 2
     }
   ]
 }
